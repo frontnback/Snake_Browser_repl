@@ -1,7 +1,7 @@
-<canvas id='gc' width="400" height></canvas>
+<canvas id='gc' width="400" height="400"></canvas>
 <script>
 window.onload=function() {
-  canv=document.getElmentById("gc");
+  canv=document.getElementById("gc");
   ctx=canv.getContext("2d");
   document.addEventListener("keydown",keyPush);
   setInterval(game,1000/15);
@@ -53,6 +53,7 @@ function game() {
 }
 
 function keyPush(evt) {
+  console.log(evt.keyCode );
   switch(evt.keyCode) {
     case 37:
       xv=-1;yv=0
@@ -62,10 +63,12 @@ function keyPush(evt) {
       break;
     case 39:
       xv=1;yv=0
-      brek;
+      break;
     case 40:
       xv=0;yv=1
-
+      break;
+    default:
+      null
   }
 }
 </script>
